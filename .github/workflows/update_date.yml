@@ -1,7 +1,7 @@
 name: Update Dates at 10pm
 on:
   schedule:
-    - cron: "0 22 * * *"
+    - cron: "0 1 * * *"
   workflow_dispatch:
     inputs:
       environment:
