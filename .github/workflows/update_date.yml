@@ -10,6 +10,8 @@ on:
         required: true
 permissions:
   actions: write
+  contents: write
+
 jobs:
   update_date:
     runs-on: ubuntu-latest
