@@ -24,3 +24,6 @@ jobs:
         uses: actions-js/push@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Redeploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2
