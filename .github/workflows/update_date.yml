@@ -2,6 +2,12 @@ name: Update Dates at 10pm
 on:
   schedule:
     - cron: "0 22 * * *"
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: "Environment to run tests against"
+        type: environment
+        required: true
 
 jobs:
   update_date:
