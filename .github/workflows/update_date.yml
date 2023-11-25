@@ -22,3 +22,5 @@ jobs:
       - run: npm install
       - run: npm run build
       - uses: stefanzweifel/git-auto-commit-action@v5
+  redeploy_static:
+    uses: ./.github/workflows/static.yml
