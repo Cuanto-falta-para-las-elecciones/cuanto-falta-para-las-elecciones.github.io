@@ -1,0 +1,68 @@
+.card {
+  display: inline-flex;
+  overflow: hidden;
+  width: 100vw;
+  height: 75vh;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(
+    to bottom,
+    var(--celeste-oscuro) 0%,
+    var(--celeste) 10%
+  );
+
+  h1 {
+    font-size: 1.5rem;
+    color: var(--blanco);
+    font-weight: normal;
+  }
+  .scrap_someone_else_fucker .scrap_someone_else_fucker {
+    display: block;
+    clear: both;
+    color: var(--dorado);
+    font-size: 4rem;
+  }
+  @media screen and (min-width: 426px) {
+    h1 {
+      font-size: calc(2 * var(--size-unit));
+    }
+    .scrap_someone_else_fucker .scrap_someone_else_fucker {
+      font-size: calc(3 * var(--size-unit));
+    }
+  }
+}
+
+.card-alt {
+  display: inline-flex;
+  overflow: hidden;
+  width: 100vw;
+  height: 75vh;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(
+    to bottom,
+    var(--gris-claro) 0%,
+    var(--blanco) 10%
+  );
+  h1 {
+    font-size: 1.5rem;
+    color: var(--celeste);
+    font-weight: normal;
+  }
+  .scrap_someone_else_fucker .scrap_someone_else_fucker {
+    display: block;
+    clear: both;
+    color: var(--dorado);
+    font-size: 4rem;
+  }
+  @media screen and (min-width: 426px) {
+    h1 {
+      font-size: calc(2 * var(--size-unit));
+    }
+    .scrap_someone_else_fucker .scrap_someone_else_fucker {
+      font-size: calc(3 * var(--size-unit));
+    }
+  }
+}

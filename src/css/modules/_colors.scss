@@ -1,0 +1,13 @@
+@use "sass:color";
+
+body {
+  --celeste-oscuro: #{color.adjust(#75aadb, $lightness: -10%)};
+  --celeste: #75aadb;
+  --celeste-claro: #{color.adjust(#75aadb, $saturation: 90%, $lightness: 30%)};
+  --celeste-mas-claro: #{color.adjust(#75aadb, $whiteness: 70%)};
+  --gris-claro: #{color.adjust(#fff, $lightness: -10%)};
+  --blanco: #fff;
+  --dorado: #fcbf49;
+  --dorado-claro: #{color.adjust(#fcbf49, $whiteness: 50%)};
+  --dorado-mas-claro: #{color.adjust(#fcbf49, $whiteness: 70%)};
+}

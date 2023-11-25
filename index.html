@@ -1,11 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cuanto falta para las elecciones?</title>
+    <style>html,
+body,
+a,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+* + * {
+  margin-top: 1.5rem;
+}
+
+body > div {
+  display: flex;
+  flex-direction: row;
+}
+
+@media screen and (max-width: 767px) {
+  body > div {
+    flex-direction: column;
+  }
+}
+
+html {
+  --size-unit: calc(1vw + 1vh);
+}
+
+p,
+pre,
+a {
+  font-family: sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+}
+
+body {
+  --celeste-oscuro: #4d91d0;
+  --celeste: #75aadb;
+  --celeste-claro: #eaf5ff;
+  --celeste-mas-claro: #dfdfdf;
+  --gris-claro: #e6e6e6;
+  --blanco: #fff;
+  --dorado: #fcbf49;
+  --dorado-claro: #fceac9;
+  --dorado-mas-claro: #fcfcfc;
+}
+
+.card {
+  display: inline-flex;
+  overflow: hidden;
+  width: 100vw;
+  height: 75vh;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(to bottom, var(--celeste-oscuro) 0%, var(--celeste) 10%);
+}
+
+.card h1 {
+  font-size: 1.5rem;
+  color: var(--blanco);
+  font-weight: normal;
+}
+
+.card .scrap_someone_else_fucker .scrap_someone_else_fucker {
+  display: block;
+  clear: both;
+  color: var(--dorado);
+  font-size: 4rem;
+}
+
+@media screen and (min-width: 426px) {
+  .card h1 {
+    font-size: calc(2 * var(--size-unit));
+  }
+  .card .scrap_someone_else_fucker .scrap_someone_else_fucker {
+    font-size: calc(3 * var(--size-unit));
+  }
+}
+
+.card-alt {
+  display: inline-flex;
+  overflow: hidden;
+  width: 100vw;
+  height: 75vh;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(to bottom, var(--gris-claro) 0%, var(--blanco) 10%);
+}
+
+.card-alt h1 {
+  font-size: 1.5rem;
+  color: var(--celeste);
+  font-weight: normal;
+}
+
+.card-alt .scrap_someone_else_fucker .scrap_someone_else_fucker {
+  display: block;
+  clear: both;
+  color: var(--dorado);
+  font-size: 4rem;
+}
+
+@media screen and (min-width: 426px) {
+  .card-alt h1 {
+    font-size: calc(2 * var(--size-unit));
+  }
+  .card-alt .scrap_someone_else_fucker .scrap_someone_else_fucker {
+    font-size: calc(3 * var(--size-unit));
+  }
+}
+
+.frecuentes {
+  min-height: calc(25vh - 3rem);
+  background: var(--celeste);
+  padding: 1.5rem 0 15rem 0;
+}
+
+.frecuentes .pregunta {
+  max-width: 50vw;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 767px) {
+  .frecuentes .pregunta {
+    max-width: 90vw;
+  }
+}
+
+.frecuentes .pregunta header {
+  margin-top: 1.5rem;
+  font-size: calc(1.25 * var(--size-unit));
+}
+
+.frecuentes .pregunta p {
+  font-size: var(--size-unit);
+}
+
+@media screen and (min-width: 426px) {
+  .frecuentes .frecuentes {
+    padding-top: 1.5ren;
+  }
+}
+
+.frecuentes .scrap_someone_else_fucker {
+  background: var(--celeste-oscuro);
+  padding: 0.05rem 0.15rem;
+  border-radius: 0.15rem;
+}
+    </style>
   </head>
   <body>
-    <h1>Falta UNA BANDA</h1>
+    <div>
+      <main class="card">
+        <h1>
+          Faltan
+          <span class="days-to-presidential-elections__update-target scrap_someone_else_fucker">
+            <span class="days-to-presidential-elections__update-target-days scrap_someone_else_fucker">1457</span>
+            días</span>
+          para las elecciones presidenciales
+        </h1>
+      </main>
+
+      <section class="card-alt">
+        <h1>
+          Faltan
+          <span class="days-to-primary-elections__update-target scrap_someone_else_fucker">
+            <span class="days-to-primary-elections__update-target-days scrap_someone_else_fucker">1387</span>
+            días</span>
+          para las PASO
+        </h1>
+      </section>
+    </div>
+    <section class="frecuentes">
+      <section class="pregunta">
+        <header>
+          <h1>Cuando son las presidenciales?</h1>
+        </header>
+        <p>
+          Las elecciones presidenciales tentativamente serían el
+          <span class="next-presidentials-date__update-target scrap_someone_else_fucker">22/11/2027</span>, cuatro años después de las últimas (el
+          <span class="last-presidentials-date__update-target scrap_someone_else_fucker">22/10/2023</span>)
+        </p>
+      </section>
+      <section class="pregunta">
+        <header>
+          <h1>Cuando son las PASO?</h1>
+        </header>
+        <p>
+          Las elecciones Primarias Abiertas, Simultáneas y Obligatorias
+          tentativamente sucederían el
+          <span class="next-primaries-date__update-target scrap_someone_else_fucker">13/09/2027</span>, cuatro años después de las últimas (el
+          <span class="last-primaries-date__update-target scrap_someone_else_fucker">13/08/2023</span>)
+        </p>
+      </section>
+    </section>
   </body>
 </html>

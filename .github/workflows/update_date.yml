@@ -1,0 +1,18 @@
+name: Update Dates at 10pm
+on:
+  schedule:
+    - cron: "0 22 * * *"
+
+jobs:
+  update_date:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Update Dates
+        uses: actions/setup-node@v3
+        with:
+          node-version: 21.2.0
+      - run: npm run build
+      - name: Commit & Push changes
+        uses: actions-js/push@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}

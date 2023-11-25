@@ -1,0 +1,70 @@
+
+> cuantofaltaparalaselecciones.github.io@1.0.0 update_date
+> node scripts/update-date.js
+
+{
+  ULTIMA_PRESIDENCIAL: '01/02/2003',
+  ULTIMA_LEGISLATIVA: '01/02/2003',
+  INDEX_PATH: 'C:\\Users\\cvergara\\q\\cuantofaltaparalaselecciones.github.io\\index.html'
+}
+{
+  node: { nodeName: '#document', mode: 'quirks', childNodes: [ [Object] ] }
+}
+{
+  node: {
+    nodeName: 'html',
+    tagName: 'html',
+    attrs: [],
+    namespaceURI: 'http://www.w3.org/1999/xhtml',
+    childNodes: [ [Object], [Object] ],
+    parentNode: { nodeName: '#document', mode: 'quirks', childNodes: [Array] }
+  }
+}
+{
+  node: {
+    nodeName: 'head',
+    tagName: 'head',
+    attrs: [],
+    namespaceURI: 'http://www.w3.org/1999/xhtml',
+    childNodes: [],
+    parentNode: {
+      nodeName: 'html',
+      tagName: 'html',
+      attrs: [],
+      namespaceURI: 'http://www.w3.org/1999/xhtml',
+      childNodes: [Array],
+      parentNode: [Object]
+    }
+  }
+}
+{
+  node: {
+    nodeName: 'body',
+    tagName: 'body',
+    attrs: [],
+    namespaceURI: 'http://www.w3.org/1999/xhtml',
+    childNodes: [ [Object] ],
+    parentNode: {
+      nodeName: 'html',
+      tagName: 'html',
+      attrs: [],
+      namespaceURI: 'http://www.w3.org/1999/xhtml',
+      childNodes: [Array],
+      parentNode: [Object]
+    }
+  }
+}
+{
+  node: {
+    nodeName: '#text',
+    value: 'C:\\Users\\cvergara\\q\\cuantofaltaparalaselecciones.github.io\\index.html',
+    parentNode: {
+      nodeName: 'body',
+      tagName: 'body',
+      attrs: [],
+      namespaceURI: 'http://www.w3.org/1999/xhtml',
+      childNodes: [Array],
+      parentNode: [Object]
+    }
+  }
+}
