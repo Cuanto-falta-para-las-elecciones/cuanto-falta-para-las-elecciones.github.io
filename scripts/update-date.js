@@ -36,20 +36,27 @@ const [PROXIMA_PRESIDENCIAL, PROXIMA_PASO] = calcularFechas();
 
 await actualizarFechas(INDEX_PATH, PROXIMA_PRESIDENCIAL, PROXIMA_PASO);
 
-function dateFromString(arFormatStringDate) {
-  const [d, m, y] = arFormatStringDate.split("/");
-  return new Date(y, m, d);
-}
-
 function calcularFechas() {
   const [dPresidencial, mPresidencial, yPresidencial] =
     ULTIMA_PRESIDENCIAL.split("/");
   const [dPaso, mPaso, yPaso] = ULTIMA_PASO.split("/");
 
-  return [
-    new Date(Number(yPresidencial) + 4, mPresidencial, dPresidencial),
-    new Date(Number(yPaso) + 4, mPaso, dPaso),
-  ];
+  const nuevasPresidenciales = new Date(
+    Number(yPresidencial) + 4,
+    Number(mPresidencial) - 1,
+    1
+  );
+  const nuevasPaso = new Date(Number(yPaso) + 4, Number(mPaso) - 1, 1);
+  while (nuevasPresidenciales.getDay() != 0) {
+    nuevasPresidenciales.setDate(nuevasPresidenciales.getDate() + 1);
+  }
+  nuevasPresidenciales.setDate(nuevasPresidenciales.getDate() + 21);
+  while (nuevasPaso.getDay() != 0) {
+    nuevasPaso.setDate(nuevasPaso.getDate() + 1);
+  } // primer domingo
+  nuevasPaso.setDate(nuevasPaso.getDate() + 21);
+
+  return [nuevasPresidenciales, nuevasPaso];
 }
 
 async function actualizarFechas(path, presidenciales, paso) {
