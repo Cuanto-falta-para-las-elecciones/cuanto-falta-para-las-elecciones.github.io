@@ -16,6 +16,7 @@ const [
   TARGET_PROX_PRES,
   TARGET_ULT_PASO,
   TARGET_PROX_PASO,
+  TARGET_META_TITLE,
 ] = [
   ".days-to-presidential-elections__update-target-days",
   ".days-to-primary-elections__update-target-days",
@@ -23,6 +24,7 @@ const [
   ".next-presidentials-date__update-target",
   ".last-primaries-date__update-target",
   ".next-primaries-date__update-target",
+  '[property="og:title"]',
 ];
 
 const INDEX_PATH = resolve(HERE, "./index.html");
@@ -62,7 +64,8 @@ function calcularFechas() {
 async function actualizarFechas(path, presidenciales, paso) {
   const htmlString = await promises.readFile(path, "utf-8");
   const { document } = parseHTML(htmlString);
-  const query = document.body.querySelector.bind(document.body);
+  const query = document.querySelector.bind(document);
+
   const [
     DOMpresidenciales,
     DOMPaso,
@@ -70,6 +73,7 @@ async function actualizarFechas(path, presidenciales, paso) {
     DOMFechaUltPaso,
     DOMFechaProxPresidenciales,
     DOMFechaProxPaso,
+    DOMMetaTitle,
   ] = [
     query(TARGET_PRESIDENCIAL),
     query(TARGET_PASO),
@@ -77,6 +81,7 @@ async function actualizarFechas(path, presidenciales, paso) {
     query(TARGET_ULT_PASO),
     query(TARGET_PROX_PRES),
     query(TARGET_PROX_PASO),
+    query(TARGET_META_TITLE),
   ];
 
   const daysBetween = (a, b) => round((b - a) / (1000 * 60 * 60 * 24));
@@ -100,6 +105,11 @@ async function actualizarFechas(path, presidenciales, paso) {
   DOMFechaProxPaso.firstChild.replaceWith(formatter.format(paso));
   DOMFechaProxPresidenciales.firstChild.replaceWith(
     formatter.format(presidenciales)
+  );
+
+  DOMMetaTitle.setAttribute(
+    "content",
+    `Faltan ${diasAPresidenciales} días para las elecciones`
   );
 
   await promises.writeFile(path, document.toString(), "utf-8");
