@@ -22,5 +22,6 @@ jobs:
       - run: npm install
       - run: npm run build
       - uses: stefanzweifel/git-auto-commit-action@v5
-  redeploy_static:
+  call_redeploy_main:
     uses: ./.github/workflows/static.yml
+    secrets: inherit
