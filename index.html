@@ -1,345 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta http-equiv="Cache-Control" content="no-store" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Faltan 1426 días para las elecciones" />
-    <meta
-      property="og:description"
-      content="Cuanto falta para las elecciones? Acá estamos contando los días"
-    />
-    <meta property="og:url" content="https://cuantofaltaparalaselecciones.ar" />
-    <meta property="og:image" content="./bandera-argentina.png" />
-    <link
-      rel="shortcut icon"
-      href="data:image/png;base64,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
-"
-      type="image/png"
-    />
-    <link
-      rel="shortcut icon"
-      href="data:image/png;base64,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
-"
-      type="image/png"
-    />
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Cache-Control" content="no-store">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Faltan 1426 días para las elecciones">
+    <meta property="og:description" content="Cuanto falta para las elecciones? Acá estamos contando los días">
+    <meta property="og:url" content="https://cuantofaltaparalaselecciones.ar">
+    <meta property="og:image" content="./bandera-argentina.png">
+    <link rel="shortcut icon" href="data:image/png;base64,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
+" type="image/png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cuanto falta para las elecciones?</title>
-    <style>
-      html,
-      body,
-      a,
-      p,
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6,
-      pre {
-        margin: 0;
-        padding: 0;
-      }
-      <style > html,
-      body,
-      a,
-      p,
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6,
-      pre {
-        margin: 0;
-        padding: 0;
-      }
+    <style>html,
+body,
+a,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre {
+  margin: 0;
+  padding: 0;
+}
 
-      html,
-      body {
-        width: 100%;
-        height: 100%;
-      }
-      html,
-      body {
-        width: 100%;
-        height: 100%;
-      }
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
 
-      * {
-        box-sizing: border-box;
-      }
-      * {
-        box-sizing: border-box;
-      }
+* {
+  box-sizing: border-box;
+}
 
-      * + * {
-        margin-top: 1.5rem;
-      }
-      * + * {
-        margin-top: 1.5rem;
-      }
+* + * {
+  margin-top: 1.5rem;
+}
 
-      body > div {
-        display: flex;
-        flex-direction: row;
-      }
-      body > div {
-        display: flex;
-        flex-direction: row;
-      }
+body > div {
+  display: flex;
+  flex-direction: row;
+}
 
-      @media screen and (max-width: 767px) {
-        body > div {
-          flex-direction: column;
-        }
-      }
-      @media screen and (max-width: 767px) {
-        body > div {
-          flex-direction: column;
-        }
-      }
+@media screen and (max-width: 767px) {
+  body > div {
+    flex-direction: column;
+  }
+}
 
-      html {
-        --size-unit: calc(1vw + 1vh);
-      }
-      html {
-        --size-unit: calc(1vw + 1vh);
-      }
+html {
+  --size-unit: calc(1vw + 1vh);
+}
 
-      p,
-      pre,
-      a {
-        font-family: sans-serif;
-      }
-      p,
-      pre,
-      a {
-        font-family: sans-serif;
-      }
+p,
+pre,
+a {
+  font-family: sans-serif;
+}
 
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6 {
-        margin: 0;
-        padding: 0;
-        font-family: sans-serif;
-        letter-spacing: -0.05rem;
-        text-transform: uppercase;
-        font-weight: 800;
-      }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  letter-spacing: -0.05rem;
+  text-transform: uppercase;
+  font-weight: 800;
+}
 
-      body {
-        --celeste-oscuro: #4d91d0;
-        --celeste: #75aadb;
-        --celeste-claro: #eaf5ff;
-        --celeste-mas-claro: #dfdfdf;
-        --gris-claro: #e6e6e6;
-        --blanco: #fff;
-        --dorado: #fcbf49;
-        --dorado-claro: #fceac9;
-        --dorado-mas-claro: #fcfcfc;
-      }
+body {
+  --celeste-oscuro: #4d91d0;
+  --celeste: #75aadb;
+  --celeste-claro: #eaf5ff;
+  --celeste-mas-claro: #dfdfdf;
+  --gris-claro: #e6e6e6;
+  --blanco: #fff;
+  --dorado: #fcbf49;
+  --dorado-claro: #fceac9;
+  --dorado-mas-claro: #fcfcfc;
+}
 
-      .card,
-      .card-alt {
-        margin-top: 0;
-      }
+.card,
+.card-alt {
+  margin-top: 0;
+}
 
-      .card {
-        display: inline-flex;
-        overflow: hidden;
-        width: 100vw;
-        height: 75vh;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        background: linear-gradient(
-          to bottom,
-          var(--celeste-oscuro) 0%,
-          var(--celeste) 10%
-        );
-      }
+.card {
+  display: inline-flex;
+  overflow: hidden;
+  width: 100vw;
+  height: 75vh;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(to bottom, var(--celeste-oscuro) 0%, var(--celeste) 10%);
+}
 
-      .card {
-        display: inline-flex;
-        overflow: hidden;
-        width: 100vw;
-        height: 75vh;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        background: linear-gradient(
-          to bottom,
-          var(--celeste-oscuro) 0%,
-          var(--celeste) 10%
-        );
-      }
+.card h1 {
+  font-size: 1.5rem;
+  color: var(--blanco);
+}
 
-      .card h1 {
-        font-size: 1.5rem;
-        color: var(--blanco);
-      }
+.card .scrap_someone_else_fucker .scrap_someone_else_fucker {
+  display: block;
+  clear: both;
+  color: var(--dorado);
+  font-size: 4rem;
+}
 
-      .card .scrap_someone_else_fucker .scrap_someone_else_fucker {
-        display: block;
-        clear: both;
-        color: var(--dorado);
-        font-size: 4rem;
-      }
-      .card .scrap_someone_else_fucker .scrap_someone_else_fucker {
-        display: block;
-        clear: both;
-        color: var(--dorado);
-        font-size: 4rem;
-      }
+@media screen and (min-width: 426px) {
+  .card h1 {
+    font-size: calc(2 * var(--size-unit));
+  }
+  .card .scrap_someone_else_fucker .scrap_someone_else_fucker {
+    font-size: calc(3 * var(--size-unit));
+  }
+}
 
-      @media screen and (min-width: 426px) {
-        .card h1 {
-          font-size: calc(2 * var(--size-unit));
-        }
-        .card .scrap_someone_else_fucker .scrap_someone_else_fucker {
-          font-size: calc(3 * var(--size-unit));
-        }
-      }
-      @media screen and (min-width: 426px) {
-        .card h1 {
-          font-size: calc(2 * var(--size-unit));
-        }
-        .card .scrap_someone_else_fucker .scrap_someone_else_fucker {
-          font-size: calc(3 * var(--size-unit));
-        }
-      }
+.card-alt {
+  display: inline-flex;
+  overflow: hidden;
+  width: 100vw;
+  height: 75vh;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(to bottom, var(--gris-claro) 0%, var(--blanco) 10%);
+}
 
-      .card-alt {
-        display: inline-flex;
-        overflow: hidden;
-        width: 100vw;
-        height: 75vh;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        background: linear-gradient(
-          to bottom,
-          var(--gris-claro) 0%,
-          var(--blanco) 10%
-        );
-      }
-      .card-alt {
-        display: inline-flex;
-        overflow: hidden;
-        width: 100vw;
-        height: 75vh;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        background: linear-gradient(
-          to bottom,
-          var(--gris-claro) 0%,
-          var(--blanco) 10%
-        );
-      }
+.card-alt h1 {
+  font-size: 1.5rem;
+  color: var(--celeste);
+}
 
-      .card-alt h1 {
-        font-size: 1.5rem;
-        color: var(--celeste);
-      }
+.card-alt .scrap_someone_else_fucker .scrap_someone_else_fucker {
+  display: block;
+  clear: both;
+  color: var(--dorado);
+  font-size: 4rem;
+}
 
-      .card-alt .scrap_someone_else_fucker .scrap_someone_else_fucker {
-        display: block;
-        clear: both;
-        color: var(--dorado);
-        font-size: 4rem;
-      }
-      .card-alt .scrap_someone_else_fucker .scrap_someone_else_fucker {
-        display: block;
-        clear: both;
-        color: var(--dorado);
-        font-size: 4rem;
-      }
+@media screen and (min-width: 426px) {
+  .card h1,
+  .card-alt h1 {
+    font-size: calc(2 * var(--size-unit));
+  }
+  .card .scrap_someone_else_fucker .scrap_someone_else_fucker,
+  .card-alt .scrap_someone_else_fucker .scrap_someone_else_fucker {
+    font-size: calc(3 * var(--size-unit));
+  }
+}
 
-      @media screen and (min-width: 426px) {
-        .card h1,
-        .card-alt h1 {
-          font-size: calc(2 * var(--size-unit));
-        }
-        .card .scrap_someone_else_fucker .scrap_someone_else_fucker,
-        .card-alt .scrap_someone_else_fucker .scrap_someone_else_fucker {
-          font-size: calc(3 * var(--size-unit));
-        }
-      }
+.frecuentes {
+  min-height: calc(25vh - 3rem);
+  background: var(--celeste);
+  padding: 1.5rem 0 15rem 0;
+}
 
-      .frecuentes {
-        min-height: calc(25vh - 3rem);
-        background: var(--celeste);
-        padding: 1.5rem 0 15rem 0;
-      }
-      .frecuentes {
-        min-height: calc(25vh - 3rem);
-        background: var(--celeste);
-        padding: 1.5rem 0 15rem 0;
-      }
+.frecuentes .pregunta {
+  max-width: 50vw;
+  margin: 0 auto;
+}
 
-      .frecuentes .pregunta {
-        max-width: 50vw;
-        margin: 0 auto;
-      }
-      .frecuentes .pregunta {
-        max-width: 50vw;
-        margin: 0 auto;
-      }
+@media screen and (max-width: 767px) {
+  .frecuentes .pregunta {
+    max-width: 90vw;
+  }
+}
 
-      @media screen and (max-width: 767px) {
-        .frecuentes .pregunta {
-          max-width: 90vw;
-        }
-      }
-      @media screen and (max-width: 767px) {
-        .frecuentes .pregunta {
-          max-width: 90vw;
-        }
-      }
+.frecuentes .pregunta header {
+  margin-top: 1.5rem;
+  font-size: calc(1.25 * var(--size-unit));
+}
 
-      .frecuentes .pregunta header {
-        margin-top: 1.5rem;
-        font-size: calc(1.25 * var(--size-unit));
-      }
-      .frecuentes .pregunta header {
-        margin-top: 1.5rem;
-        font-size: calc(1.25 * var(--size-unit));
-      }
+.frecuentes .pregunta p {
+  font-size: var(--size-unit);
+}
 
-      .frecuentes .pregunta p {
-        font-size: var(--size-unit);
-      }
-      .frecuentes .pregunta p {
-        font-size: var(--size-unit);
-      }
+@media screen and (min-width: 426px) {
+  .frecuentes .frecuentes {
+    padding-top: 1.5ren;
+  }
+}
 
-      @media screen and (min-width: 426px) {
-        .frecuentes .frecuentes {
-          padding-top: 1.5ren;
-        }
-      }
-      @media screen and (min-width: 426px) {
-        .frecuentes .frecuentes {
-          padding-top: 1.5ren;
-        }
-      }
-
-      .frecuentes .scrap_someone_else_fucker {
-        background: var(--celeste-oscuro);
-        padding: 0.05rem 0.15rem;
-        border-radius: 0.15rem;
-      }
-      .frecuentes .scrap_someone_else_fucker {
-        background: var(--celeste-oscuro);
-        padding: 0.05rem 0.15rem;
-        border-radius: 0.15rem;
-      }
+.frecuentes .scrap_someone_else_fucker {
+  background: var(--celeste-oscuro);
+  padding: 0.05rem 0.15rem;
+  border-radius: 0.15rem;
+}
     </style>
   </head>
   <body>
@@ -347,24 +203,9 @@
       <main class="card">
         <h1>
           Faltan
-          <span
-            class="days-to-presidential-elections__update-target scrap_someone_else_fucker"
-          >
-            <span
-              class="days-to-presidential-elections__update-target-days scrap_someone_else_fucker"
-              >1426</span
-            >
-            días</span
-          >
-          <span
-            class="days-to-presidential-elections__update-target scrap_someone_else_fucker"
-          >
-            <span
-              class="days-to-presidential-elections__update-target-days scrap_someone_else_fucker"
-              >1426</span
-            >
-            días</span
-          >
+          <span class="days-to-presidential-elections__update-target scrap_someone_else_fucker">
+            <span class="days-to-presidential-elections__update-target-days scrap_someone_else_fucker">1426</span>
+            días</span>
           para las elecciones presidenciales
         </h1>
       </main>
@@ -372,24 +213,9 @@
       <section class="card-alt">
         <h1>
           Faltan
-          <span
-            class="days-to-primary-elections__update-target scrap_someone_else_fucker"
-          >
-            <span
-              class="days-to-primary-elections__update-target-days scrap_someone_else_fucker"
-              >1363</span
-            >
-            días</span
-          >
-          <span
-            class="days-to-primary-elections__update-target scrap_someone_else_fucker"
-          >
-            <span
-              class="days-to-primary-elections__update-target-days scrap_someone_else_fucker"
-              >1363</span
-            >
-            días</span
-          >
+          <span class="days-to-primary-elections__update-target scrap_someone_else_fucker">
+            <span class="days-to-primary-elections__update-target-days scrap_someone_else_fucker">1363</span>
+            días</span>
           para las PASO
         </h1>
       </section>
@@ -401,22 +227,8 @@
         </header>
         <p>
           Las elecciones presidenciales tentativamente serían el
-          <span
-            class="next-presidentials-date__update-target scrap_someone_else_fucker"
-            >24/10/2027</span
-          >, cuatro años después de las últimas (el
-          <span
-            class="last-presidentials-date__update-target scrap_someone_else_fucker"
-            >22/10/2023</span
-          >)
-          <span
-            class="next-presidentials-date__update-target scrap_someone_else_fucker"
-            >24/10/2027</span
-          >, cuatro años después de las últimas (el
-          <span
-            class="last-presidentials-date__update-target scrap_someone_else_fucker"
-            >22/10/2023</span
-          >)
+          <span class="next-presidentials-date__update-target scrap_someone_else_fucker">24/10/2027</span>, cuatro años después de las últimas (el
+          <span class="last-presidentials-date__update-target scrap_someone_else_fucker">22/10/2023</span>)
         </p>
       </section>
       <section class="pregunta">
@@ -426,22 +238,8 @@
         <p>
           Las elecciones Primarias Abiertas, Simultáneas y Obligatorias
           tentativamente sucederían el
-          <span
-            class="next-primaries-date__update-target scrap_someone_else_fucker"
-            >22/08/2027</span
-          >, cuatro años después de las últimas (el
-          <span
-            class="last-primaries-date__update-target scrap_someone_else_fucker"
-            >13/08/2023</span
-          >)
-          <span
-            class="next-primaries-date__update-target scrap_someone_else_fucker"
-            >22/08/2027</span
-          >, cuatro años después de las últimas (el
-          <span
-            class="last-primaries-date__update-target scrap_someone_else_fucker"
-            >13/08/2023</span
-          >)
+          <span class="next-primaries-date__update-target scrap_someone_else_fucker">22/08/2027</span>, cuatro años después de las últimas (el
+          <span class="last-primaries-date__update-target scrap_someone_else_fucker">13/08/2023</span>)
         </p>
       </section>
       <section class="pregunta">
@@ -450,14 +248,7 @@
           <p>
             Nosotros calculamos cuantos días faltan para el último domingo de
             Octubre dentro de 4 años, de acuerdo al
-            <a
-              href="https://servicios.infoleg.gob.ar/infolegInternet/anexos/15000-19999/19442/texact.htm"
-              >artículo 53 del Código Electoral Nacional</a
-            >.
-            <a
-              href="https://servicios.infoleg.gob.ar/infolegInternet/anexos/15000-19999/19442/texact.htm"
-              >artículo 53 del Código Electoral Nacional</a
-            >.
+            <a href="https://servicios.infoleg.gob.ar/infolegInternet/anexos/15000-19999/19442/texact.htm">artículo 53 del Código Electoral Nacional</a>.
           </p>
           <p>
             Puede pasar que llegado el momento Presidencia elija una fecha
